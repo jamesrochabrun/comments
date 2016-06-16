@@ -10,4 +10,12 @@
 
 @interface UIColor (CompanyColors)
 
++ (UIColor *)backgroundViewColor;
++ (UIColor *)oomamiColor;
++ (UIColor *)textColor;
+
+
+
+
+
 @end

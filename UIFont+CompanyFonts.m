@@ -10,4 +10,15 @@
 
 @implementation UIFont (CompanyFonts)
 
++ (UIFont *)setHeadingFont {
+    return [UIFont fontWithName:@"Lato-Medium" size:18];
+}
+
++ (UIFont *)setSecondaryFont {
+    return [UIFont fontWithName:@"Lato-Regular" size:15];
+}
+
++ (UIFont *)commentsFont {
+    return [UIFont fontWithName:@"Lato-Regular" size:17];
+}
 @end

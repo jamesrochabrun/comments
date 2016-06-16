@@ -11,9 +11,16 @@
 		7B6248E01D111DFF00D5162A /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 7B6248DF1D111DFF00D5162A /* AppDelegate.m */; };
 		7B6248E31D111DFF00D5162A /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7B6248E21D111DFF00D5162A /* ViewController.m */; };
 		7B6248E61D111DFF00D5162A /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7B6248E41D111DFF00D5162A /* Main.storyboard */; };
-		7B6248E91D111DFF00D5162A /* Comments.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 7B6248E71D111DFF00D5162A /* Comments.xcdatamodeld */; };
 		7B6248EB1D111DFF00D5162A /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 7B6248EA1D111DFF00D5162A /* Assets.xcassets */; };
 		7B6248EE1D111DFF00D5162A /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7B6248EC1D111DFF00D5162A /* LaunchScreen.storyboard */; };
+		7B6248FA1D11258600D5162A /* UIColor+CompanyColors.m in Sources */ = {isa = PBXBuildFile; fileRef = 7B6248F91D11258600D5162A /* UIColor+CompanyColors.m */; };
+		7BFA9E4F1D11A54100042294 /* UIFont+CompanyFonts.m in Sources */ = {isa = PBXBuildFile; fileRef = 7BFA9E4E1D11A54100042294 /* UIFont+CompanyFonts.m */; };
+		7BFA9E521D11C2DB00042294 /* CommentsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7BFA9E511D11C2DB00042294 /* CommentsViewController.m */; };
+		7BFA9E5B1D11EC0000042294 /* CommentCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 7BFA9E5A1D11EC0000042294 /* CommentCell.m */; };
+		7BFA9E5E1D11EC5300042294 /* CommentObject.m in Sources */ = {isa = PBXBuildFile; fileRef = 7BFA9E5D1D11EC5300042294 /* CommentObject.m */; };
+		7BFA9E621D11FFA500042294 /* lato in Resources */ = {isa = PBXBuildFile; fileRef = 7BFA9E611D11FFA500042294 /* lato */; };
+		7BFA9E661D12000400042294 /* Lato-Medium.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 7BFA9E651D12000400042294 /* Lato-Medium.ttf */; };
+		7BFA9E681D12000A00042294 /* Lato-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 7BFA9E671D12000A00042294 /* Lato-Regular.ttf */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,10 +31,22 @@
 		7B6248E11D111DFF00D5162A /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
 		7B6248E21D111DFF00D5162A /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
 		7B6248E51D111DFF00D5162A /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
-		7B6248E81D111DFF00D5162A /* Comments.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Comments.xcdatamodel; sourceTree = "<group>"; };
 		7B6248EA1D111DFF00D5162A /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		7B6248ED1D111DFF00D5162A /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		7B6248EF1D111DFF00D5162A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		7B6248F81D11258600D5162A /* UIColor+CompanyColors.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIColor+CompanyColors.h"; sourceTree = "<group>"; };
+		7B6248F91D11258600D5162A /* UIColor+CompanyColors.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIColor+CompanyColors.m"; sourceTree = "<group>"; };
+		7BFA9E4D1D11A54100042294 /* UIFont+CompanyFonts.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "UIFont+CompanyFonts.h"; path = "../UIFont+CompanyFonts.h"; sourceTree = "<group>"; };
+		7BFA9E4E1D11A54100042294 /* UIFont+CompanyFonts.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "UIFont+CompanyFonts.m"; path = "../UIFont+CompanyFonts.m"; sourceTree = "<group>"; };
+		7BFA9E501D11C2DB00042294 /* CommentsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CommentsViewController.h; sourceTree = "<group>"; };
+		7BFA9E511D11C2DB00042294 /* CommentsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CommentsViewController.m; sourceTree = "<group>"; };
+		7BFA9E591D11EC0000042294 /* CommentCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = CommentCell.h; path = ../CommentCell.h; sourceTree = "<group>"; };
+		7BFA9E5A1D11EC0000042294 /* CommentCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = CommentCell.m; path = ../CommentCell.m; sourceTree = "<group>"; };
+		7BFA9E5C1D11EC5300042294 /* CommentObject.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = CommentObject.h; path = ../CommentObject.h; sourceTree = "<group>"; };
+		7BFA9E5D1D11EC5300042294 /* CommentObject.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = CommentObject.m; path = ../CommentObject.m; sourceTree = "<group>"; };
+		7BFA9E611D11FFA500042294 /* lato */ = {isa = PBXFileReference; lastKnownFileType = folder; path = lato; sourceTree = "<group>"; };
+		7BFA9E651D12000400042294 /* Lato-Medium.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "Lato-Medium.ttf"; path = "lato/Lato-Medium.ttf"; sourceTree = "<group>"; };
+		7BFA9E671D12000A00042294 /* Lato-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "Lato-Regular.ttf"; path = "lato/Lato-Regular.ttf"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -62,13 +81,14 @@
 			children = (
 				7B6248DE1D111DFF00D5162A /* AppDelegate.h */,
 				7B6248DF1D111DFF00D5162A /* AppDelegate.m */,
-				7B6248E11D111DFF00D5162A /* ViewController.h */,
-				7B6248E21D111DFF00D5162A /* ViewController.m */,
+				7B6248F51D111EF100D5162A /* model */,
+				7B6248F61D111EF700D5162A /* view */,
+				7B6248F71D11208700D5162A /* controller */,
 				7B6248E41D111DFF00D5162A /* Main.storyboard */,
 				7B6248EA1D111DFF00D5162A /* Assets.xcassets */,
+				7BFA9E5F1D11FF7100042294 /* fonts */,
 				7B6248EC1D111DFF00D5162A /* LaunchScreen.storyboard */,
 				7B6248EF1D111DFF00D5162A /* Info.plist */,
-				7B6248E71D111DFF00D5162A /* Comments.xcdatamodeld */,
 				7B6248DB1D111DFF00D5162A /* Supporting Files */,
 			);
 			path = Comments;
@@ -80,6 +100,49 @@
 				7B6248DC1D111DFF00D5162A /* main.m */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		7B6248F51D111EF100D5162A /* model */ = {
+			isa = PBXGroup;
+			children = (
+				7BFA9E5C1D11EC5300042294 /* CommentObject.h */,
+				7BFA9E5D1D11EC5300042294 /* CommentObject.m */,
+			);
+			name = model;
+			sourceTree = "<group>";
+		};
+		7B6248F61D111EF700D5162A /* view */ = {
+			isa = PBXGroup;
+			children = (
+				7BFA9E4D1D11A54100042294 /* UIFont+CompanyFonts.h */,
+				7BFA9E4E1D11A54100042294 /* UIFont+CompanyFonts.m */,
+				7B6248F81D11258600D5162A /* UIColor+CompanyColors.h */,
+				7B6248F91D11258600D5162A /* UIColor+CompanyColors.m */,
+				7BFA9E591D11EC0000042294 /* CommentCell.h */,
+				7BFA9E5A1D11EC0000042294 /* CommentCell.m */,
+			);
+			name = view;
+			sourceTree = "<group>";
+		};
+		7B6248F71D11208700D5162A /* controller */ = {
+			isa = PBXGroup;
+			children = (
+				7B6248E11D111DFF00D5162A /* ViewController.h */,
+				7B6248E21D111DFF00D5162A /* ViewController.m */,
+				7BFA9E501D11C2DB00042294 /* CommentsViewController.h */,
+				7BFA9E511D11C2DB00042294 /* CommentsViewController.m */,
+			);
+			name = controller;
+			sourceTree = "<group>";
+		};
+		7BFA9E5F1D11FF7100042294 /* fonts */ = {
+			isa = PBXGroup;
+			children = (
+				7BFA9E651D12000400042294 /* Lato-Medium.ttf */,
+				7BFA9E671D12000A00042294 /* Lato-Regular.ttf */,
+				7BFA9E611D11FFA500042294 /* lato */,
+			);
+			name = fonts;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -139,6 +202,9 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				7BFA9E661D12000400042294 /* Lato-Medium.ttf in Resources */,
+				7BFA9E681D12000A00042294 /* Lato-Regular.ttf in Resources */,
+				7BFA9E621D11FFA500042294 /* lato in Resources */,
 				7B6248EE1D111DFF00D5162A /* LaunchScreen.storyboard in Resources */,
 				7B6248EB1D111DFF00D5162A /* Assets.xcassets in Resources */,
 				7B6248E61D111DFF00D5162A /* Main.storyboard in Resources */,
@@ -153,9 +219,13 @@
 			buildActionMask = 2147483647;
 			files = (
 				7B6248E31D111DFF00D5162A /* ViewController.m in Sources */,
+				7BFA9E5B1D11EC0000042294 /* CommentCell.m in Sources */,
+				7BFA9E4F1D11A54100042294 /* UIFont+CompanyFonts.m in Sources */,
 				7B6248E01D111DFF00D5162A /* AppDelegate.m in Sources */,
+				7BFA9E5E1D11EC5300042294 /* CommentObject.m in Sources */,
+				7B6248FA1D11258600D5162A /* UIColor+CompanyColors.m in Sources */,
 				7B6248DD1D111DFF00D5162A /* main.m in Sources */,
-				7B6248E91D111DFF00D5162A /* Comments.xcdatamodeld in Sources */,
+				7BFA9E521D11C2DB00042294 /* CommentsViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -306,21 +376,9 @@
 				7B6248F41D111DFF00D5162A /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
-
-/* Begin XCVersionGroup section */
-		7B6248E71D111DFF00D5162A /* Comments.xcdatamodeld */ = {
-			isa = XCVersionGroup;
-			children = (
-				7B6248E81D111DFF00D5162A /* Comments.xcdatamodel */,
-			);
-			currentVersion = 7B6248E81D111DFF00D5162A /* Comments.xcdatamodel */;
-			path = Comments.xcdatamodeld;
-			sourceTree = "<group>";
-			versionGroupType = wrapper.xcdatamodel;
-		};
-/* End XCVersionGroup section */
 	};
 	rootObject = 7B6248D01D111DFF00D5162A /* Project object */;
 }

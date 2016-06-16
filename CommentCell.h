@@ -7,7 +7,12 @@
 //
 
 #import <UIKit/UIKit.h>
+@class CommentObject;
 
 @interface CommentCell : UITableViewCell
+@property (weak, nonatomic) IBOutlet UILabel *commentLabel;
+
+- (void)configureCellWithObject:(CommentObject*)commentObject;
+
 
 @end

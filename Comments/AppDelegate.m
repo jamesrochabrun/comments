@@ -7,6 +7,8 @@
 //
 
 #import "AppDelegate.h"
+#import "UIColor+CompanyColors.h"
+#import "UIFont+CompanyFonts.h"
 
 @interface AppDelegate ()
 
@@ -17,6 +19,16 @@
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
     // Override point for customization after application launch.
+    UINavigationBar *navigationBarAppereance = [UINavigationBar appearance];
+    navigationBarAppereance.titleTextAttributes = @{
+                                                    NSForegroundColorAttributeName:  [UIColor oomamiColor],
+                                                    NSFontAttributeName:  [UIFont setHeadingFont],
+                                                    
+                                                    };
+    navigationBarAppereance.tintColor = [UIColor oomamiColor];
+    navigationBarAppereance.barTintColor = [UIColor whiteColor];
+    [[UIBarButtonItem appearance] setBackButtonTitlePositionAdjustment:UIOffsetMake(0, -60)
+                                                         forBarMetrics:UIBarMetricsDefault];
     return YES;
 }
 

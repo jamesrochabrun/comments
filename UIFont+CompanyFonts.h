@@ -9,5 +9,10 @@
 #import <UIKit/UIKit.h>
 
 @interface UIFont (CompanyFonts)
++ (UIFont *)setHeadingFont;
++ (UIFont *)setSecondaryFont;
++ (UIFont *)commentsFont;
+
+
 
 @end

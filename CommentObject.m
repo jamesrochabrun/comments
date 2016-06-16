@@ -10,4 +10,12 @@
 
 @implementation CommentObject
 
+- (instancetype)initWithString:(NSString*)comment {
+    self = [super init];
+    if (self) {
+        _comment = comment;
+    }
+    return self;
+}
+
 @end

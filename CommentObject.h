@@ -9,5 +9,9 @@
 #import <Foundation/Foundation.h>
 
 @interface CommentObject : NSObject
+@property NSString *comment;
+
+- (instancetype)initWithString:(NSString*)comment;
+
 
 @end
