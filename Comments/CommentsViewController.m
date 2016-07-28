@@ -18,6 +18,7 @@
 @property NSMutableArray *commentsArray;
 @property (weak, nonatomic) IBOutlet UIView *addCommentBackgroundView;
 @property (weak, nonatomic) IBOutlet UITableView *tableView;
+@property CGFloat keyBoardHeight;
 
 
 
@@ -29,6 +30,7 @@
  
     self.title = @"Comments";
     self.tableView.separatorStyle = UITableViewStylePlain;
+    self.view.backgroundColor = [UIColor grayColor];
     self.textField.placeholder = @"add a comment";
     self.commentsArray = [NSMutableArray new];
     self.addButton.layer.cornerRadius = 8;
@@ -39,6 +41,15 @@
         CommentObject *comment = [[CommentObject alloc]initWithString:commentStr];
         [self.commentsArray addObject:comment];
     }
+    
+    [[NSNotificationCenter defaultCenter] addObserver:self
+                                             selector:@selector(keyboardWillShow:)
+                                                 name:UIKeyboardWillShowNotification
+                                               object:nil];
+    [[NSNotificationCenter defaultCenter] addObserver:self
+                                             selector:@selector(keyboardWillHide:)
+                                                 name:UIKeyboardWillHideNotification
+                                               object:nil];
 }
 
 
@@ -68,7 +79,6 @@
         self.textField.text = @"";
     }
     
-    [self.tableView setContentOffset:CGPointMake(0, CGFLOAT_MAX)];
     dispatch_async(dispatch_get_main_queue(), ^{
         [self.tableView reloadData];
     });
@@ -78,20 +88,12 @@
 #pragma textfieldDelegate Methods
 
 - (void)textFieldDidBeginEditing:(UITextField *)textField {
-    [UIView beginAnimations:nil context:nil];
-    [UIView setAnimationDuration:.3];
-    [UIView setAnimationBeginsFromCurrentState:TRUE];
-    self.view.frame = CGRectMake(self.view.frame.origin.x, self.view.frame.origin.y -253, self.view.frame.size.width, self.view.frame.size.height);
-    
-    [UIView commitAnimations];
+
 }
 
 - (void)textFieldDidEndEditing:(UITextField *)textField {
-    [UIView beginAnimations:nil context:nil];
-    [UIView setAnimationDuration:.3];
-    [UIView setAnimationBeginsFromCurrentState:TRUE];
-    self.view.frame = CGRectMake(self.view.frame.origin.x, self.view.frame.origin.y +253, self.view.frame.size.width, self.view.frame.size.height);
-    [UIView commitAnimations];
+ 
+    [self.tableView setContentOffset:CGPointMake(0, CGFLOAT_MAX)];
 }
 
 - (void) dismissKeyboard:(id)sender {
@@ -100,9 +102,29 @@
 }
 
 
+- (void)keyboardWillShow:(NSNotification*)notification {
+    NSDictionary *info = [notification userInfo];
+    CGSize kbSize = [[info objectForKey:UIKeyboardFrameEndUserInfoKey] CGRectValue].size;
+    CGFloat deltaHeight = kbSize.height - _keyBoardHeight;
+    // Write code to adjust views accordingly using deltaHeight
+    [UIView beginAnimations:nil context:nil];
+    [UIView setAnimationDuration:.3];
+    [UIView setAnimationBeginsFromCurrentState:TRUE];
+    self.view.frame = CGRectMake(self.view.frame.origin.x, self.view.frame.origin.y - deltaHeight, self.view.frame.size.width, self.view.frame.size.height);
+    
+    [UIView commitAnimations];
+    
+    _keyBoardHeight = kbSize.height;
+}
 
-
-
+- (void)keyboardWillHide:(NSNotification*)notification {
+    [UIView beginAnimations:nil context:nil];
+    [UIView setAnimationDuration:.3];
+    [UIView setAnimationBeginsFromCurrentState:TRUE];
+    self.view.frame = CGRectMake(self.view.frame.origin.x, self.view.frame.origin.y + _keyBoardHeight, self.view.frame.size.width, self.view.frame.size.height);
+    [UIView commitAnimations];
+    _keyBoardHeight = 0.0f;
+}
 
 
 
