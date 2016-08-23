@@ -42,6 +42,8 @@
         [self.commentsArray addObject:comment];
     }
     
+    
+    //STEP 1 : add this in viewdidload
     [[NSNotificationCenter defaultCenter] addObserver:self
                                              selector:@selector(keyboardWillShow:)
                                                  name:UIKeyboardWillShowNotification
@@ -50,6 +52,7 @@
                                              selector:@selector(keyboardWillHide:)
                                                  name:UIKeyboardWillHideNotification
                                                object:nil];
+    ////////////////////////////////////
 }
 
 
@@ -89,10 +92,12 @@
 
 - (void)textFieldDidBeginEditing:(UITextField *)textField {
 
+    
 }
 
 - (void)textFieldDidEndEditing:(UITextField *)textField {
  
+    //this is just in case of you want to show the las comment , so the tableview scrolls up when a new comment is added
     [self.tableView setContentOffset:CGPointMake(0, CGFLOAT_MAX)];
 }
 
@@ -102,7 +107,9 @@
 }
 
 
+//STEP 2: add the method for eacg NSNotification
 - (void)keyboardWillShow:(NSNotification*)notification {
+    
     NSDictionary *info = [notification userInfo];
     CGSize kbSize = [[info objectForKey:UIKeyboardFrameEndUserInfoKey] CGRectValue].size;
     CGFloat deltaHeight = kbSize.height - _keyBoardHeight;
@@ -118,6 +125,7 @@
 }
 
 - (void)keyboardWillHide:(NSNotification*)notification {
+    
     [UIView beginAnimations:nil context:nil];
     [UIView setAnimationDuration:.3];
     [UIView setAnimationBeginsFromCurrentState:TRUE];
@@ -125,6 +133,7 @@
     [UIView commitAnimations];
     _keyBoardHeight = 0.0f;
 }
+////////////////////////////////////////////////
 
 
 
